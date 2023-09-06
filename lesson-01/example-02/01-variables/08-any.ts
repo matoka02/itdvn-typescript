@@ -8,4 +8,4 @@ console.log(someValue);         // 100
 someValue.toFixed();
 
 someValue = 'test';
-someValue.toFixed();          // Uncaught TypeError: someValue.toFixed is not a function at 08-any.ts:11:11
+// someValue.toFixed();          // Uncaught TypeError: someValue.toFixed is not a function at 08-any.ts:11:11
