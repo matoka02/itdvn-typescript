@@ -4,8 +4,8 @@
   "compilerOptions": {
     "module": "commonJS",
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "dist",
   },
-  "include": ["./src/**/*.ts"],
+  "include": ["./**/*.ts"],
   "exclude": ["node_modules"]
 }
