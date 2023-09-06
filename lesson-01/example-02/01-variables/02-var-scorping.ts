@@ -25,8 +25,8 @@ function var2() {
 function var3() {
   for (var i = 0; i < 5; i++) {
     setTimeout(function(){
-      console.log(i);      
+      console.log(i);       // 5, 5, 5, 5, 5   
     }, 10)
   }
 };
-// var3();                     // 5, 5, 5, 5, 5
+// var3();                     
