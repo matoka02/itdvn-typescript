@@ -1,0 +1,15 @@
+{
+  "name": "itdvn-typescript",
+  "version": "1.0.0",
+  "description": "Typescript Fundamentals",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -w"
+  },
+  "keywords": [],
+  "author": "matoka02",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.2.2"
+  }
+}
