@@ -1,34 +1,35 @@
-// Найпоширеніший приклад використання статичних полів це клас Math
-// Щоб скористатись методами класу Math нам не потрібен екземпляр
+// Самый распространенный пример использования статических полей – это класс Math.
+// Чтобы воспользоваться методами класса Math не нужен экземпляр.
 console.log(Math.PI);
 console.log(Math.random());
 
-// так працювати не буде:
+// так работать не будет:
 // const math = new Math();
 // math.random();
 
-// Патерн singleton (одинак)
+// Паттерн singleton (единственный)
 class Database {
-    private static readonly instance: Database = new Database(); // статичне приватне поле
+  // статистическое приватное поле
+  private static readonly instance: Database = new Database(); 
 
-    // Приватний конструктор, щоб заборонити створення екземплярів класу
-    private constructor() {
-        console.log('Викликаємо конструктор');
-    }
+  // Частный конструктор, чтобы запретить создание экземпляров класса.
+  private constructor() {
+    console.log('Вызываем конструктор');
+  }
 
-    // Статичний метод, існує лише у класа та відсутній у екземпляра
-    public static getInstance(): Database {
-        return Database.instance;
-    }
+  // Статический метод существует только у класса и отсутствует у экземпляра.
+  public static getInstance(): Database {
+    return Database.instance;
+  }
 
-    // методи для роботи з базою данних
-    public getData(): void {
-        console.log('Received data from Database');
-    }
+  // методы для работы с базой данных
+  public getData(): void {
+    console.log('Received data from Database');
+  }
 
-    public setData(): void {
-        console.log('Data saved to Database');
-    }
+  public setData(): void {
+    console.log('Data saved to Database');
+  }
 }
 
 // const database: Database = new Database(); // Constructor of class 'Database' is private and only accessible within the class declaration.
@@ -41,4 +42,5 @@ db.getData();
 db.setData();
 
 const db2: Database = Database.getInstance();
-console.log('db === db2', db === db2); // якщо екземпляр класу один то маємо отримати true
+// если экземпляр класса один, то должны получить true
+console.log('db === db2', db === db2);

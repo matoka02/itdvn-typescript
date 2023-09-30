@@ -1,48 +1,53 @@
 class Rectangle {
-    private _width: number;
-    private _height: number;
+  private _width: number;
+  private _height: number;
 
-    // метод для отримання значення закритої властивості
-    public getWidth(): number {
-        return this._width;
+  // метод для получения значения закрытого свойства
+  public getWidth(): number {
+    return this._width;
+  }
+
+  // метод для установления значения закрытого свойства
+  public setWidth(value: number): void {
+    if (value <= 0) {
+      this._width = 1;
+    } else {
+      this._width = value;
     }
+  }
 
-    // метод для встановлення значення закритій властивості
-    public setWidth(value: number): void {
-        if (value <= 0) {
-            this._width = 1;
-        } else {
-            this._width = value;
-        }
+  // accessors - механизм, который позволяет перехватить обращение к члену объекта на запись или чтение.
+
+  // getter
+  get height(): number {
+    return this._height;
+  }
+
+  // setter
+  set height(value: number) {
+    if (value <= 0) {
+      this._height = 1;
+    } else {
+      this._height = value;
     }
+  }
 
-    // accessors - механізм, який дозволяє перехопити звернення до члена об'єкта на запис чи читання.
-
-    // getter
-    get height(): number {
-        return this._height;
-    }
-
-    // setter
-    set height(value: number) {
-        if (value <= 0) {
-            this._height = 1;
-        } else {
-            this._height = value;
-        }
-    }
-
-    public calculateArea(): number {
-        return this._width * this._height;
-    }
+  public calculateArea(): number {
+    return this._width * this._height;
+  }
 }
 
 const rect: Rectangle = new Rectangle();
-rect.setWidth(100); // встановлення ширини за допомогою методу
-console.log(rect.getWidth()); // читання значення закритої властивості за допомогою методу
+// установление ширины при помощи метода
+rect.setWidth(100);
+// чтение значения закрытого свойства при помощи метода
+console.log(rect.getWidth());
 
-rect.height = -20; // встановлення висоти за допомогою setter. Запускається метод set на рядку 28, значення 20 передається як параметр
-console.log(rect.height); // Читання значення закритої властивості за допомогою аксесору. Тут викликається метод get з рядка 23
+// установление высоты при помощи setter. Запускается метод set на строке 22, значение 20 передается как параметр 
+rect.height = -20;
+// rect.height = 6;
+// чтение значения закрытого свойства при помощи акссесора. Тут вызывается метод get со строки 27
+console.log(rect.height);
 
 const rectArea: number = rect.calculateArea();
 console.log(rectArea);
