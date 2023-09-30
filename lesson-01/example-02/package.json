@@ -1,7 +1,7 @@
 {
-  "name": "itdvn-typescript",
+  "name": "itdvn-typescript-lesson-01",
   "version": "1.0.0",
-  "description": "Typescript Fundamentals",
+  "description": "Typescript Fundamentals. Variables and functions",
   "main": "index.js",
   "scripts": {
     "start": "tsc -w"
