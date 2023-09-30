@@ -1,21 +1,28 @@
 class User {
-    firstName: string; // властивість
-    lastName: string; // властивість
+  // свойство
+  firstName: string; 
+  lastName: string; 
 
-    // метод
-    print(): void {
-        console.log(this.firstName + ' ' + this.lastName);
-    }
-}
+  // метод
+  print(): void {
+    console.log(this.firstName + " " + this.lastName);    
+    // Ivan Ivanov 
+    // John Doe
+  };
+};
 
-const user1: User = new User(); // створюємо екземпляр класу User викликаючи конструктор та ініціалізуємо змінну user1
-user1.firstName = 'Ivan'; // присвоєння значення властивості firstName на екземплярі user1
-user1.lastName = 'Ivanov';
+// создание экземпляра класса User, вызывая конструктор и инициализация переменной user1
+const user1: User = new User(); 
+// присвоение значения свойству firstName на экземпляре user1
+user1.firstName = "Ivan"; 
+// присвоение значения свойству lastName на экземпляре user1
+user1.lastName = "Ivanov";
 
-const user2: User = new User(); // створюємо екземпляр класу User викликаючи конструктор та ініціалізуємо змінну user2
-user2.firstName = 'John'; // присвоєння значення властивості firstName на екземплярі user2
-user2.lastName = 'Doe';
+const user2: User = new User(); 
+user2.firstName = "John"; 
+user2.lastName = "Doe";
 
-user1.print(); // виклик методу print на екземплярі user1
-user2.print(); // виклик методу print на екземплярі user2
-console.log(user1);
+// вызов метода print на экземпляре
+user1.print(); 
+user2.print(); 
+console.log(user1);               // User {firstName: 'Ivan', lastName: 'Ivanov'}

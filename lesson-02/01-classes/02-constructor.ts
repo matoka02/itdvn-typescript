@@ -1,13 +1,19 @@
 class MyClass {
-    value: string;
+  value: string;
 
-    // визначаємо конструктор для ініціалізації класу
-    constructor() {
-        console.log('Працює конструктор класу MyClass1');
-        this.value = 'Hello world';
-    }
-}
+  //  определение конструктора для инициализации класса
+  constructor() {
+    console.log("Работает конструктор класса MyClass1");
+    this.value = "Hello world";
+  }
+};
 
-console.log('Створення екземпляра класу MyClass1');
-const temp = new MyClass(); // виклик конструктора, визначеного на рядку 5
+console.log("Создание экземпляра класса MyClass1");
+// вызов конструктора, определенного на строке 5
+const temp = new MyClass();
 console.log(temp.value);
+
+
+// Создание экземпляра класса MyClass1
+// Работает конструктор класса MyClass1
+// Hello world
