@@ -1,13 +1,13 @@
-// за допомогою ключового слова readonly можна створити поля лише для читання
-// Таке поле може бути ініціалізоване в момент його створення або у конструкторі
+// при помощи ключевого слова readonly можно создать поле только для чтения. 
+// такое поле может быть инициировано в момент его создания или в конструкторре
 class Dog {
-    public readonly name: string;
-    public readonly numberOfLegs: number = 4;
+  public readonly name: string;
+  public readonly numberOfLegs: number = 4;
 
-    constructor(name: string) {
-        this.name = name;
-    }
-}
+  constructor(name: string) {
+    this.name = name;
+  }
+};
 
 const dog: Dog = new Dog('Sharik');
 console.log(dog.name);
