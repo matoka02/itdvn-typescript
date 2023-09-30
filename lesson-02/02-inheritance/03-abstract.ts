@@ -1,39 +1,39 @@
-// abstract - ключове слово, яке дозволяє створювати абстрактні методи та абстрактні класи.
-// абстрактний клас - це клас, який може існувати лише в ролі базового класу. Створити екземпляр абстрактного класу не вдасться.
-// абстрактний метод - це метод, який не має реалізації в поточному класі, але обов'язково повинен бути реалізований у похідному класі.
-// абстрактні методи можуть створюватися лише в абстрактних класах.
+// abstract - ключевое слово, позволяющее создавать абстрактные методы и абстрактные классы.
+// Абстрактный класс - это класс, который может существовать только в качестве базового класса. Создать экземпляр абстрактного класса не получится.
+// Абстрактный метод - это метод, не имеющий реализации в текущем классе, но обязательно должен быть реализован в производном классе.
+// Абстрактные методы могут создаваться только в абстрактных классах.
 
-// абстрактний клас
+// абстрактный класс 
 abstract class Animal {
-    constructor(public name: string) {}
+  constructor(public name: string) { }
+  // абстрактный метод 
+  abstract makeSound(): void;
 
-    abstract makeSound(): void; // абстрактний метод
-
-    public move(): void {
-        console.log(this.name + ' пересувається');
-    }
-}
+  public move(): void {
+    console.log(this.name + ' передвигается');
+  }
+};
 
 class Cat extends Animal {
-    constructor() {
-        super('Кіт');
-    }
+  constructor() {
+    super('Кот');
+  }
 
-    // обов'язкова реалізація абстрактного методу із базового класу. Спробуйте видалити цей метод із класу Cat
-    makeSound(): void {
-        console.log('Мяу-Мяу');
-    }
-}
+  // обязательна реализация абстрактного метода из базового класса. Попробуйте удалить этот метод из класса Cat
+  makeSound(): void {
+    console.log('Мяу-Мяу');
+  }
+};
 
 class Cow extends Animal {
-    constructor() {
-        super('Корова');
-    }
+  constructor() {
+    super('Корова');
+  }
 
-    makeSound(): void {
-        console.log('My-y-y-y-y');
-    }
-}
+  makeSound(): void {
+    console.log('My-y-y-y-y');
+  }
+};
 
 const murzik: Animal = new Cat();
 murzik.makeSound();
@@ -43,4 +43,4 @@ const burenka: Animal = new Cow();
 burenka.makeSound();
 burenka.move();
 
-// const animal: Animal = new Animal('animal');
+// const animal: Animal = new Animal('animal');    // Cannot create an instance of an abstract class.
