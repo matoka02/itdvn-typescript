@@ -1,0 +1,14 @@
+{
+    "name": "itdvn-typescript-lesson-02",
+    "version": "1.0.0",
+    "description": "TypeScript Fundamentals. Classes and Interfaces",
+    "main": "index.js",
+    "scripts": {
+        "start": "tsc -w"
+    },
+    "author": "ITVDN",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^5.2.2"
+    }
+}
