@@ -1,0 +1,14 @@
+{
+  "name": "itdvn-typescript-lesson-03",
+  "version": "1.0.0",
+  "description": "TypeScript Fundamentals. Modules and Namespaces",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc -w"
+  },
+  "author": "ITVDN",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
