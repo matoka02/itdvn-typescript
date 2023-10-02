@@ -2,7 +2,7 @@ interface EqualityComparer<T> {
   equals(item: T): boolean;
 }
 
-// Для EqualityComparer<T> type variable буде такий же як для UniqueCollection
+// Для EqualityComparer<T> type variable будет такой же, как для UniqueCollection
 class UniqueCollection<T extends EqualityComparer<T>> {
   private data: T[] = [];
 
@@ -16,7 +16,7 @@ class UniqueCollection<T extends EqualityComparer<T>> {
   public showData() {
     console.log(this.data);
   }
-}
+};
 
 class Order implements EqualityComparer<Order> {
   constructor(
@@ -28,7 +28,7 @@ class Order implements EqualityComparer<Order> {
   equals(item: Order): boolean {
     return item.id === this.id;
   }
-}
+};
 
 const order1 = new Order(1, 'John', 'Laptop');
 const order2 = new Order(2, 'Robin', 'Mobile Phone');

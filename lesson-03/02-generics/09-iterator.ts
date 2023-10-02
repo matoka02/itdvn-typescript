@@ -1,23 +1,23 @@
-// цей інтерфейс буде реалізований класом, який містить дані, які можна отримати.
-// колекція даних
+// этот интерфейс будет реализован классом, содержащим данные, которые можно получить.
+// коллекция данных
 interface MyIterable<T> {
   values(): MyIterator<T>;
-}
+};
 
-// даний інтерфейс описує об'єкт, що контролює обхід даних у колекції
+// данный интерфейс описывает объект, контролирующий обход данных в коллекции
 interface MyIterator<T> {
   next(): MyIteratorResult<T>;
-}
+};
 
-// Цей інтерфейс описує об'єкт, що визначає результати роботи ітератора
+// этот интерфейс описывает объект, определяющий результаты работы итератора.
 interface MyIteratorResult<T> {
   done: boolean;
   value: T;
-}
+};
 
 class Point {
   constructor(public x: number, public y: number) {}
-}
+};
 
 // коллекция
 class Vector implements MyIterable<Point> {
@@ -30,9 +30,9 @@ class Vector implements MyIterable<Point> {
   values(): MyIterator<Point> {
     return new VectorIterator(this.points);
   }
-}
+};
 
-// ітератор для колекції Vector
+// итератор для коллекции Vector
 class VectorIterator implements MyIterator<Point> {
   private current: number = 0;
 
@@ -51,7 +51,7 @@ class VectorIterator implements MyIterator<Point> {
       };
     }
   }
-}
+};
 
 const vector: Vector = new Vector();
 vector.add(new Point(10, 20));
@@ -59,7 +59,7 @@ vector.add(new Point(1, 30));
 vector.add(new Point(0, 2));
 vector.add(new Point(15, 12));
 
-// використання ітератора
+// использование итератора
 const iterator = vector.values();
 let next = iterator.next();
 

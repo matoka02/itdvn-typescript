@@ -6,11 +6,11 @@ function* stringSequence() {
   yield '!';
 }
 
-const iterable1 = stringSequence(); // отримання generator object саме тіло функції не виконується
+const iterable1 = stringSequence(); // получение generator object, само тело функции не выполняется
 let result = '';
 
-// коли буде викликаний метод next почне виконуватися generator funciton до першого ключового слова yield
-// після цього функція призупинить свою роботу до наступного виклику методу next
+// когда будет вызван метод next, начнет выполняться generator funciton до первого ключевого слова yield
+// после этого функция приостановит свою работу до следующего вызова метода next
 for (const item of iterable1) {
   result += item;
 }
@@ -21,6 +21,7 @@ class MyStringCollection {
 
   *getValues() {
     for (let i = 0; i < this.values.length; i++) {
+      // console.log('here');      
       yield this.values[i];
     }
   }
