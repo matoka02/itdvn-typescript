@@ -16,7 +16,7 @@ export class ValidatorSelector {
     if (validator) {
       return validator;
     } else {
-      throw Error('He знайдено валідатор  ' + name);
+      throw Error('Не обнаружен валидатор  ' + name);
     }
   }
 }

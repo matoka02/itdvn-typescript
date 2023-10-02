@@ -1,5 +1,4 @@
-// Після компіляції ts файли будуть перетворені js
-// для роботи прикладів у tsconfig.json потрібно встановити "module": "es6"
+// После компиляции ts-файли будут преобразованы в js для работы примеров в tsconfig.json необходимо установить "module": "es6"
 import { Validator, ValidationResult } from './validator.js';
 
 const data1 = {
@@ -16,7 +15,7 @@ const data2 = {
   email: 'example',
 };
 
-// налаштування об'єкта для перевірки
+// настройка объекта для проверки
 const config = {
   firstName: 'required',
   lastName: 'required',

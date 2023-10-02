@@ -7,19 +7,19 @@ export class RequiresValidator implements ValidationStrategy {
     validate(value: string): boolean {
         return value !== "";
     };
-    message: string = "Обов'язкове значення";
+    message: string = "Обязательное значение";
 }
 
 export class NumberValidator implements ValidationStrategy {
     validate(value: string): boolean {
         return /\d+/.test(value);
     }
-    message: string = "Значення має бути числом"
+    message: string = 'Значение должно быть числом';
 };
 
 export class EmailValidators implements ValidationStrategy {
     validate(value: string): boolean {
         return /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i.test(value);
     }
-    message: string = "Значення має бути  email адресою"
+    message: string = 'Значение должно быть email-адресом';
 };
