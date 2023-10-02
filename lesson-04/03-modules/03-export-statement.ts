@@ -11,4 +11,5 @@ class EmailValidator2 {
 }
 
 // export { EmailValidator, EmailValidator2 };
-export { EmailValidator, EmailValidator2 as MyEmailValidator }; // експорт із зазначенням іншого імені
+// экспорт с указанием другого имени
+export { EmailValidator, EmailValidator2 as MyEmailValidator }; 

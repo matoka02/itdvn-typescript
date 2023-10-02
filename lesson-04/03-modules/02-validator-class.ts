@@ -1,5 +1,7 @@
-import { Validator } from "./01-validators"; // імпорт інтерфейсу Validator з модуля 01-validators
-// import { Validator, CreditCardValidator } from "./01-validators"; // імпорт кількох типів 
+// импорт интерфейса Validator из модуля 01-validators
+import { Validator } from "./01-validators"; 
+// импорт нескольких типов 
+// import { Validator, CreditCardValidator } from "./01-validators"; 
 
 class PhoneNumberValidator implements Validator {
     validate(value: string): boolean {

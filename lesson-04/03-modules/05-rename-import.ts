@@ -1,4 +1,5 @@
-import { EmailValidator as EmailV } from '03-export-statement'; // імпорт із зазначенням іншого імені
+// импорт с указанием другого имени
+import { EmailValidator as EmailV } from '03-export-statement'; 
 
 class EmailValidator {
   validate() {
