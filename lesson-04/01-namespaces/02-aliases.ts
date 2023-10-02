@@ -24,8 +24,8 @@ namespace Shapes {
   }
 }
 
-// створення псевдоніма з ім'ям complex для простору імен Shapes.Complex
+//создание псевдонима с именем complex для пространства имен Shapes.Complex
 import complex = Shapes.Complex;
 
 const img1 = new complex.Image();
-const img2 = new Shapes.Complex.Image(); // те саме, що і 30 рядок
+const img2 = new Shapes.Complex.Image(); // то же самое, что на 30 строке
