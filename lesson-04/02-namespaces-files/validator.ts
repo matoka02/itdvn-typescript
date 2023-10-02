@@ -26,7 +26,7 @@ namespace Validation {
         const isValid = validator.validate(validatorValue);
 
         if (!isValid) {
-          const message = 'He правильне значення для  ' + key + ', ' + validator.message;
+          const message = 'Неправильное значение для  ' + key + ', ' + validator.message;
           messages.push(message);
         }
       });

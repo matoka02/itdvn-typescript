@@ -8,8 +8,8 @@ namespace Validation {
       ValidatorSelector.validators['required'] = new RequiresValidator();
       ValidatorSelector.validators['number'] = new NumberValidator();
       ValidatorSelector.validators['email'] = new EmailValidator();
-
-      ValidatorSelector.initialize = () => {}; // для уникнення повторної ініціалізації
+      // во избежание повторной инициализации
+      ValidatorSelector.initialize = () => {}; 
     }
 
     static select(name: string): ValidationStrategy {
@@ -17,7 +17,7 @@ namespace Validation {
       if (validator) {
         return validator;
       } else {
-        throw new Error('He знайдено валідатор  ' + name);
+        throw new Error('Не обнаружен валидатор  ' + name);
       }
     }
   }
